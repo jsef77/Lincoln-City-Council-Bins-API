@@ -1,6 +1,8 @@
 # Lincoln-City-Council-Bins-API-LED
 Node.js application to control an Ardunio LED depending on which bins to put out for the upcoming bin day
 
+To simply fetch a .json file see [here](https://github.com/jsef77/Lincoln-City-Council-Bins-API/tree/main)
+
 ## Requirements
 
 - Arduino board with FirmataStandardPlus sketch loaded ([See Here](https://github.com/rwaldron/johnny-five/wiki/Getting-Started#troubleshooting))
