@@ -14,3 +14,6 @@ run the application with:
 ```bash
 node index.js
 ```
+
+### Further uses
+- [with Arduino LED](https://github.com/jsef77/Lincoln-City-Council-Bins-API/tree/LED)
