@@ -1,4 +1,4 @@
-# Lincoln-City-Council-Bins-API
+# Lincoln-City-Council-Bins-API-LED
 Node.js application to control an Ardunio LED depending on which bins to put out for the upcoming bin day
 
 ## Requirements
