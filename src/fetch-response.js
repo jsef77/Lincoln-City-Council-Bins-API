@@ -7,6 +7,8 @@ const API_PATH = process.env.API_PATH
 var myBody = `{"formValues":{"Section 1":{"postcode":{"value":"${POSTCODE}"}}}}`
 var myHeaders = new Headers();
 
+var fetchSuccess = false;
+
 function WriteResponseToFile(responseData)
 {
   return new Promise((resolve, reject) => {
@@ -30,7 +32,8 @@ function Fetch(phpSessionID){
     const controller = new AbortController();
     const timeoutId = setTimeout(() => {
       controller.abort()
-      throw new Error("Fetch Request Timeout. Ensure that variables are correct in .env file")
+      if(fetchSuccess = false)
+        throw new Error("Fetch Request Timeout. Ensure that variables are correct in .env file")
       }, 5000);
 
     var requestOptions = {
@@ -44,6 +47,7 @@ function Fetch(phpSessionID){
     fetch(API_PATH, requestOptions)
     .then(response => response.text())
     .then(response => WriteResponseToFile(response))
+    .then(response => {fetchSuccess = true})
     .catch(error => console.log('error', error))
     .then(onComplete => resolve("done"))
     
