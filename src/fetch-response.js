@@ -15,8 +15,9 @@ function WriteResponseToFile(responseData)
     fs.writeFile("./src/response.json", responseData, function(err) {
       if (err)
         console.log(err);
-    resolve("done")
-  })
+
+        resolve("done")  
+  }) 
 
 });
 };
