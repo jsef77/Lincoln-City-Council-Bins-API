@@ -12,11 +12,9 @@ function ParseAndSave(){
             if (err) {
                 console.log(err);
             }
-
-            resolve(UPRN_JSON);   
         });
                 
-     
+        resolve(UPRN_JSON);        
     });            
 };
 
