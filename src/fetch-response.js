@@ -1,9 +1,8 @@
 const { response } = require("express");
 const fs = require("fs");
 
-const POSTCODE = process.env.POSTCODE
-const API_PATH = process.env.API_PATH
-
+const POSTCODE = process.env.POSTCODE;
+const API_PATH = process.env.API_PATH;
 var myBody = `{"formValues":{"Section 1":{"postcode":{"value":"${POSTCODE}"}}}}`
 var myHeaders = new Headers();
 
